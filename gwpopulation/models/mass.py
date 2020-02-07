@@ -151,7 +151,7 @@ def two_component_single(mass, alpha, mmin, mmax, lam, mpp, sigpp):
         Standard deviation fo the Gaussian component.
     """
     p_pow = powerlaw(mass, alpha=-alpha, high=mmax, low=mmin)
-    p_norm = truncnorm(mass, mu=mpp, sigma=sigpp, high=100, low=mmin)
+    p_norm = truncnorm(mass, mu=mpp, sigma=sigpp, high=130, low=mmin)
     prob = (1 - lam) * p_pow + lam * p_norm
     return prob
 
